@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "./Header";
+import Header1 from "./Header1";
 
 class App extends Component {
   render() {
@@ -8,7 +8,7 @@ class App extends Component {
     return (
 
       <div>
-        <Header />
+        <Header1 />
         <button>Add</button>
         <div>
           <span>Name</span><br />
