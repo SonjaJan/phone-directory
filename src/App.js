@@ -32,6 +32,7 @@ class App extends Component {
           return  <div key={sub.id} className="phoneListGrid">
               <span>{sub.name}</span>
               <span>{sub.phone}</span>
+              <button className="delBtn">Delete</button>
             </div>
           
         })
