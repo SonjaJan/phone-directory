@@ -3,6 +3,10 @@ import Header1 from "./Header1";
 import "./App.css"
 
 class App extends Component {
+
+  clickHandler(message) {
+    alert(message);
+  }
   render() {
 
     let studentsInfo = [
@@ -121,7 +125,7 @@ class App extends Component {
           return  <div key={sub.id} className="phoneListGrid">
               <span>{sub.name}</span>
               <span>{sub.phone}</span>
-              <button className="delBtn">Delete</button>
+              <button className="delBtn" onClick={this.clickHandler.bind(this, "Delete Clicked")}>Delete</button>
             </div>
           
         })

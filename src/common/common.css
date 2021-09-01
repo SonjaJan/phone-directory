@@ -1,0 +1,24 @@
+.component-body-container{
+    padding: 20px;
+}
+.custom-btn{
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    text-transform: uppercase;
+    width: 80px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    background: #d3d3d3;
+}
+.btn {
+    background: #23a57a;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 80px;
+    font-size: 1rem;
+}
