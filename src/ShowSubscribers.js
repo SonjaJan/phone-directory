@@ -1,8 +1,15 @@
 import React, { Component } from "react";
 import Header1 from "./Header1";
-import "./App.css"
+import "./ShowSubscribers.css"
 
-class App extends Component {
+class ShowSubscribers extends Component {
+
+  constructor(){
+    super();
+    this.state = {
+        subscribersListToShow: []
+    }
+  }
 
   clickHandler(message) {
     alert(message);
@@ -97,18 +104,18 @@ class App extends Component {
     
     }
 
-    let subscribers = [
-      {
-        id: 1,
-        name: "Sonja",
-        phone: 2222222222 
-      },
-      {
-        id:2,
-        name: "Zlatko",
-        phone: 1111111111
-      }
-    ]
+    // let subscribers = [
+    //   {
+    //     id: 1,
+    //     name: "Sonja",
+    //     phone: 2222222222 
+    //   },
+    //   {
+    //     id:2,
+    //     name: "Zlatko",
+    //     phone: 1111111111
+    //   }
+    // ]
     
     return (
 
@@ -121,7 +128,7 @@ class App extends Component {
         </div> 
 
         {
-        subscribers.map(sub => {
+        this.state.subscribersListToShow.map(sub => {
           return  <div key={sub.id} className="phoneListGrid">
               <span>{sub.name}</span>
               <span>{sub.phone}</span>
@@ -149,4 +156,4 @@ class App extends Component {
 
 
 
-export default App;
+export default ShowSubscribers;

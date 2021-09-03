@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import ShowSubscribers from './ShowSubscribers';
 import reportWebVitals from './reportWebVitals';
 import './common/common.css';
 import AddSubscriber from './AddSubscriber';
 
 ReactDOM.render(
 <React.StrictMode>
-<AddSubscriber />
+<ShowSubscribers />
 </React.StrictMode>,
 document.getElementById('root')
 );
