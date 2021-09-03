@@ -4,18 +4,8 @@ import "./ShowSubscribers.css"
 
 class ShowSubscribers extends Component {
 
-  constructor(){
-    super();
-    this.state = {
-        subscribersListToShow: []
-    }
-  }
-
-  clickHandler(message) {
-    alert(message);
-  }
   render() {
-
+   
     let studentsInfo = [
       {
           roll: 1,
@@ -128,11 +118,11 @@ class ShowSubscribers extends Component {
         </div> 
 
         {
-        this.state.subscribersListToShow.map(sub => {
+        this.props.subscribersList.map(sub => {
           return  <div key={sub.id} className="phoneListGrid">
               <span>{sub.name}</span>
               <span>{sub.phone}</span>
-              <button className="delBtn" onClick={this.clickHandler.bind(this, "Delete Clicked")}>Delete</button>
+              <button className="delBtn" >Delete</button>
             </div>
           
         })
