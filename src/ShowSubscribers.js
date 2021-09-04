@@ -5,6 +5,10 @@ import {Link} from 'react-router-dom';
 
 class ShowSubscribers extends Component {
 
+    onDeleteClick = (subId) => {
+        this.props.deleteSubscriberHandler(subId);
+    }
+
   render() {
    
     let studentsInfo = [
@@ -112,7 +116,7 @@ class ShowSubscribers extends Component {
 
       <div>
         <Header1 heading="Phone Directory"/>
-        <Link to="./add"><button className="btn">Add</button></Link>
+        <Link to="/add"><button className="btn">Add</button></Link>
         <div className="phoneListGrid">
           <span className="grid-item">Name</span>
           <span className="grid-item">Phone</span>
@@ -123,7 +127,7 @@ class ShowSubscribers extends Component {
           return  <div key={sub.id} className="phoneListGrid">
               <span>{sub.name}</span>
               <span>{sub.phone}</span>
-              <button className="delBtn" >Delete</button>
+              <button className="delBtn" onClick={this.onDeleteClick.bind(this,sub.id)} >Delete</button>
             </div>
           
         })
